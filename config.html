@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konfigurasi WhatsApp — SPX Express Indonesia</title>
+  <meta name="description" content="Halaman konfigurasi nomor WhatsApp customer service SPX Express Indonesia.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#ee4d2d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-box">SPX</div>
+    <div>
+      <div class="logo-text">SPX Express</div>
+      <div class="logo-sub">Cek Resi & Tracking</div>
+    </div>
+  </a>
+  <nav class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="cek-resi.html">Cek Resi</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="config.html" class="active">Config</a>
+  </nav>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <button class="mobile-close" onclick="toggleMenu()">✕</button>
+    <a href="index.html">🏠 Beranda</a>
+    <a href="cek-resi.html">🔍 Cek Resi</a>
+    <a href="kontak.html">📞 Kontak</a>
+    <a href="config.html">⚙️ Config</a>
+  </div>
+</div>
+
+<section class="hero" style="padding-top:56px;">
+  <h1>Konfigurasi <span>WhatsApp</span></h1>
+  <p>Ubah nomor WhatsApp customer service yang terintegrasi di seluruh halaman situs.</p>
+</section>
+
+<section class="track-section">
+  <div class="form-card">
+    <h2>Pengaturan Nomor WhatsApp</h2>
+    <label for="waInput">Nomor WhatsApp (format: 628xxxxxxxxxx)</label>
+    <input type="text" id="waInput" placeholder="6285166661990">
+    <p style="font-size:13px;color:#888;margin-bottom:16px;">
+      Nomor saat ini: <strong id="currentWa">-</strong>
+    </p>
+    <button class="btn-main" style="max-width:100%;margin:0 0 10px;" onclick="simpanConfig()">Simpan Pengaturan</button>
+    <button class="btn-outline" style="max-width:100%;" onclick="resetConfig()">Reset ke Default</button>
+    <p id="configStatus" style="margin-top:16px;text-align:center;font-weight:600;color:#22c55e;display:none;">
+      ✓ Pengaturan berhasil disimpan
+    </p>
+    <p style="font-size:12.5px;color:#888;margin-top:20px;text-align:center;">
+      Pengaturan disimpan di browser (localStorage). Untuk mengubah default permanen, edit file <code>config.js</code> di server.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>SPX Express</h4>
+        <a href="index.html">Beranda</a>
+        <a href="cek-resi.html">Cek Resi</a>
+        <a href="kontak.html">Kontak CS</a>
+        <a href="config.html">Pengaturan</a>
+      </div>
+      <div class="footer-col">
+        <h4>Layanan</h4>
+        <a href="cek-resi.html">Tracking Paket</a>
+        <a href="kontak.html">Customer Service</a>
+        <a href="kontak.html">Bantuan 24 Jam</a>
+      </div>
+      <div class="footer-col">
+        <h4>Informasi</h4>
+        <a href="kontak.html">Hubungi Kami</a>
+        <a href="config.html">Konfigurasi WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 SPX Express Indonesia. Seluruh hak cipta dilindungi.</p>
+      <p class="footer-disclaimer">
+        Situs ini merupakan layanan customer service resmi SPX Express Indonesia.
+        Untuk informasi resmi kunjungi <a href="https://spx.co.id" target="_blank" rel="noopener">spx.co.id</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="wa-float wa-chat" data-msg="Halo saya butuh bantuan SPX Express" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.12-1.958A15.9 15.9 0 0 0 16.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.31 22.594c-.39 1.1-2.27 2.1-3.13 2.18-.86.08-1.66.36-5.6-1.16-4.74-1.86-7.72-6.7-7.96-7.02-.24-.32-1.9-2.54-1.9-4.84s1.2-3.44 1.62-3.9c.42-.46.92-.58 1.24-.58.32 0 .64 0 .92.02.3.02.7-.12 1.08.82.38.94 1.32 3.24 1.44 3.48.12.24.2.52.04.84-.16.32-.24.52-.48.8-.24.28-.5.62-.72.84-.24.24-.48.5-.2.98.28.48 1.26 2.08 2.7 3.36 1.86 1.66 3.42 2.16 3.9 2.4.48.24.76.2 1.04-.12.28-.32 1.2-1.4 1.52-1.88.32-.48.64-.4 1.08-.24.44.16 2.8 1.32 3.28 1.56.48.24.8.36.92.56.12.2.12 1.18-.28 2.28z"/>
+  </svg>
+</a>
+
+<script src="config.js"></script>
+<script>
+  const savedWa = localStorage.getItem('spx_wa_number');
+  if (savedWa) window.CONFIG.WA_NUMBER = savedWa;
+
+  function applyWa() {
+    document.getElementById('currentWa').textContent = CONFIG.WA_NUMBER;
+    document.getElementById('waInput').value = CONFIG.WA_NUMBER;
+    document.querySelectorAll('.wa-chat').forEach(el => {
+      el.href = waLink(el.dataset.msg);
+      el.target = '_blank';
+      el.rel = 'noopener';
+    });
+  }
+
+  function simpanConfig() {
+    const val = document.getElementById('waInput').value.trim().replace(/[^0-9]/g, '');
+    if (val.length < 10) { alert('Nomor WhatsApp tidak valid'); return; }
+    localStorage.setItem('spx_wa_number', val);
+    CONFIG.WA_NUMBER = val;
+    applyWa();
+    const st = document.getElementById('configStatus');
+    st.style.display = 'block';
+    setTimeout(() => st.style.display = 'none', 2500);
+  }
+
+  function resetConfig() {
+    localStorage.removeItem('spx_wa_number');
+    location.reload();
+  }
+
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  applyWa();
+</script>
+</body>
+</html>
