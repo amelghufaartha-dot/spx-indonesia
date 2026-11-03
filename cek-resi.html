@@ -3,41 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPX Express Indonesia — Cek Resi, Lacak Paket & CS Resmi 24 Jam</title>
-  <meta name="description" content="Cek resi SPX Express Indonesia secara mudah dan cepat. Lacak paket SPX Express, cek status pengiriman, dan hubungi customer service resmi 24 jam. Tracking paket akurat.">
-  <meta name="keywords" content="spx express, cek resi spx, lacak paket spx, tracking spx express, spx express indonesia, cek ongkir spx, customer service spx, spx tracking, spx express cek resi">
-  <meta name="author" content="SPX Express Indonesia">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://spx-indonesia.vercel.app/">
+  <title>Cek Resi SPX Express — Lacak Paket & Tracking Online 24 Jam</title>
+  <meta name="description" content="Cek resi SPX Express online. Lacak paket SPX Express dengan nomor resi Anda. Tracking paket cepat, akurat, dan real-time 24 jam melalui customer service resmi.">
+  <meta name="keywords" content="cek resi spx, lacak paket spx express, tracking spx, spx express tracking, cek resi spx express, spx express indonesia">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spx-indonesia.vercel.app/cek-resi.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="SPX Express Indonesia — Cek Resi & Lacak Paket">
-  <meta property="og:description" content="Cek resi SPX Express, lacak paket, dan hubungi CS resmi 24 jam.">
-  <meta property="og:url" content="https://spx-indonesia.vercel.app/">
-  <meta property="og:locale" content="id_ID">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="Cek Resi SPX Express — Lacak Paket Online">
+  <meta property="og:description" content="Lacak paket SPX Express dengan nomor resi Anda secara real-time.">
+  <meta property="og:url" content="https://spx-indonesia.vercel.app/cek-resi.html">
   <meta name="theme-color" content="#ee4d2d">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "SPX Express Indonesia",
-    "url": "https://spx-indonesia.vercel.app/",
-    "description": "Layanan cek resi dan lacak paket SPX Express Indonesia.",
-    "areaServed": "ID",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+6285166661990",
-      "contactType": "customer service",
-      "availableLanguage": "Indonesian"
-    }
-  }
-  </script>
 </head>
 <body>
 
@@ -50,8 +29,8 @@
     </div>
   </a>
   <nav class="nav-links">
-    <a href="index.html" class="active">Beranda</a>
-    <a href="cek-resi.html">Cek Resi</a>
+    <a href="index.html">Beranda</a>
+    <a href="cek-resi.html" class="active">Cek Resi</a>
     <a href="kontak.html">Kontak</a>
     <a href="config.html">Config</a>
   </nav>
@@ -68,42 +47,14 @@
   </div>
 </div>
 
-<div class="info-banner">
-  📦 Gudang sortir Jabodetabek sedang memproses lebih dari 250.000 paket hari ini
-</div>
-
-<section class="hero">
-  <div class="online-badge">
-    <div class="online-dot"></div>
-    Sedang online: <strong id="online-count">1.248</strong> pengguna
-  </div>
-  <h1>Lacak Paket <span>SPX Express</span> Anda dengan Mudah</h1>
-  <p>
-    Cek resi SPX Express Indonesia secara cepat dan akurat.
-    Pantau status paket, temukan info gudang, dan hubungi customer service resmi kapan saja.
-  </p>
-  <a href="cek-resi.html" class="btn-main">🔍 Cek Resi Sekarang</a>
-  <a href="#" class="btn-outline wa-chat" data-msg="Halo saya butuh bantuan SPX Express">📞 Hubungi CS 24 Jam</a>
-  <div class="trust">
-    <span>✓ CS Resmi</span>
-    <span>🔒 Data Aman</span>
-    <span>🇮🇩 Layanan Indonesia</span>
-    <span>⚡ Respons Cepat</span>
-  </div>
-  <div class="live-feed">
-    <div class="live-dot"></div>
-    <div id="live-text">Andi (Jakarta) baru saja mengecek resi SPX Standard</div>
-  </div>
+<section class="hero" style="padding-top:56px;">
+  <h1>Cek Resi <span>SPX Express</span></h1>
+  <p>Masukkan nomor resi SPX Express Anda untuk melacak status paket secara real-time.</p>
 </section>
 
-<div class="quick-actions">
-  <a href="cek-resi.html" class="qa-btn primary">📍 Cek Resi Paket</a>
-  <a href="kontak.html" class="qa-btn">🇮🇩 Hubungi CS</a>
-</div>
-
-<section class="track-section" id="track">
+<section class="track-section">
   <div class="track-box">
-    <h2>Cek Status Pengiriman</h2>
+    <h2>Lacak Paket Anda</h2>
     <input type="text" id="resiInput" placeholder="Masukkan nomor resi SPX (contoh: SPXID...)">
     <button class="btn-main" style="max-width:100%;margin:0;" onclick="cekResi()">Lacak Paket</button>
     <div class="loading" id="loading"></div>
@@ -115,24 +66,6 @@
       <a href="#" class="btn-main wa-chat" style="max-width:100%;font-size:15px;padding:13px;"
          data-msg="Halo saya butuh bantuan resi SPX Express">Chat WhatsApp</a>
     </div>
-  </div>
-</section>
-
-<section class="features">
-  <div class="feature-card">
-    <div class="icon">📦</div>
-    <h3>Cek Resi Real-time</h3>
-    <p>Pantau status paket SPX Express kapan saja dengan nomor resi Anda.</p>
-  </div>
-  <div class="feature-card">
-    <div class="icon">📍</div>
-    <h3>Info Gudang & Hub</h3>
-    <p>Temukan lokasi gudang sortir dan service point terdekat di kota Anda.</p>
-  </div>
-  <div class="feature-card">
-    <div class="icon">💬</div>
-    <h3>Bantuan 24 Jam</h3>
-    <p>Customer service resmi siap membantu kendala paket melalui WhatsApp.</p>
   </div>
 </section>
 
@@ -181,23 +114,6 @@
     el.target = '_blank';
     el.rel = 'noopener';
   });
-
-  const countEl = document.getElementById('online-count');
-  let base = CONFIG.ONLINE_BASE;
-  setInterval(() => {
-    base += Math.floor(Math.random() * 5) - 2;
-    if (base < 1100) base = 1100;
-    countEl.textContent = base.toLocaleString('id-ID');
-  }, 4000);
-
-  const names = ['Andi (Jakarta)', 'Siti (Bandung)', 'Budi (Surabaya)', 'Rina (Medan)', 'Dewi (Makassar)', 'Rizki (Palembang)'];
-  const actions = ['mengecek resi SPX Standard', 'menghubungi CS', 'mencari gudang terdekat', 'melacak paket SPX Hemat'];
-  const liveEl = document.getElementById('live-text');
-  setInterval(() => {
-    const n = names[Math.floor(Math.random() * names.length)];
-    const a = actions[Math.floor(Math.random() * actions.length)];
-    liveEl.textContent = `${n} baru saja ${a}`;
-  }, 6000);
 
   function cekResi() {
     const input = document.getElementById('resiInput');
