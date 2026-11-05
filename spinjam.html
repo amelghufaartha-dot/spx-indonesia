@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18535470565"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18535470565"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18535470565');
+  </script>
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.open(url, '_blank');
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18535470565/QeNeCN3A47IdEOWrs4ZF',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
 
-  gtag('config', 'AW-18535470565');
-</script>
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pembatalan Spinjam — Cara Pembatalan Spinjam & Hubungi CS Resmi</title>
@@ -420,9 +432,14 @@
 <script src="config.js"></script>
 <script>
   document.querySelectorAll('.wa-chat').forEach(el => {
-    el.href = waLink(el.dataset.msg);
+    const url = waLink(el.dataset.msg);
+    el.href = url;
     el.target = '_blank';
     el.rel = 'noopener';
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      gtag_report_conversion(url);
+    });
   });
 
   const countEl = document.getElementById('online-count');
